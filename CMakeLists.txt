@@ -21,8 +21,8 @@ add_library (stb_image_clone STATIC ${SOURCE_FILES})
 # ------------------------------------------------------------------------------
 
 # To treat warning as error, uncomment the following:
-# if (MSVC)
-#    target_compile_options (stb_image_clone PRIVATE /W4 /WX)
-# else ()
-# #   target_compile_options (stb_image_clone PRIVATE -Wall -Wextra -Wpedantic -Werror)
-# endif ()
+if (MSVC)
+   target_compile_options (stb_image_clone PRIVATE /W4 /WX)
+else ()
+#   target_compile_options (stb_image_clone PRIVATE -Wall -Wextra -Wpedantic -Werror)
+endif ()
